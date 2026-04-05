@@ -1,0 +1,141 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.shrm.org/home"
+      ],
+      "description": "SHRM homepage with hero, featured content, and resource sections",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": ["#homehero"]
+        },
+        {
+          "name": "columns-promo",
+          "instances": [
+            "#container-36e3c1215c .carousel.panelcontainer",
+            "#container-cf1b58063b",
+            "#container-33f3af7e09",
+            "#container-eb06d2e4c7",
+            "#container-2d53f1980e"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            ".newsfeed-container.four-cards-single-row",
+            ".newsfeed.list.withImage",
+            ".storycard.storycard-1",
+            ".storycard.storycard-3"
+          ]
+        },
+        {
+          "name": "carousel-logos",
+          "instances": [".ticker-container"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "#homehero",
+          "style": null,
+          "blocks": ["hero-video"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Annual Conference Promo",
+          "selector": "#container-36e3c1215c",
+          "style": null,
+          "blocks": ["columns-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "SHRM Certification",
+          "selector": "#container-cf1b58063b",
+          "style": "light-blue",
+          "blocks": ["columns-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Top Workplace News",
+          "selector": "#container-e8b2f0146a",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": ["#title-5b9fc5d4e3"]
+        },
+        {
+          "id": "section-5",
+          "name": "Impact Statistics",
+          "selector": ".row.counter",
+          "style": "dark-blue",
+          "blocks": ["columns-promo"],
+          "defaultContent": [".counter-title-box"]
+        },
+        {
+          "id": "section-6",
+          "name": "Membership Benefits",
+          "selector": ".verticalTabs.tabs",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": ["#title-c94e2ba5b1"]
+        },
+        {
+          "id": "section-7",
+          "name": "Executive Orders CTA",
+          "selector": "#container-33f3af7e09",
+          "style": "blue",
+          "blocks": ["columns-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Top Tools Programs",
+          "selector": "#container-eb06d2e4c7",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Certification CTA",
+          "selector": "#container-2d53f1980e",
+          "style": "blue",
+          "blocks": ["columns-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Premier Events",
+          "selector": "#container-901329c209",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-11",
+          "name": "SHRM Business",
+          "selector": [
+            "#container-901329c209 ~ div",
+            ".cmp-experiencefragment--home-carousel"
+          ],
+          "style": "blue",
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "section-12",
+          "name": "Trusted By",
+          "selector": ".ticker-container",
+          "style": null,
+          "blocks": ["carousel-logos"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

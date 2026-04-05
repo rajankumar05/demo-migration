@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-logos",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-04-05T22:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.shrm.org/home",
+    "originPage": "SHRM homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "logo-marquee",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "scrolling logo images",
+    "buttonCount": 0,
+    "imageCount": 10
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "partner logo marquees",
+      "client logo displays",
+      "trusted-by sections"
+    ],
+    "notSuitableFor": [
+      "content slideshows",
+      "image galleries with captions",
+      "hero carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-05T22:04:00.000Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-05T22:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.shrm.org/home",
+    "originPage": "SHRM homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "news-stories",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + category tag + title + date + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news article listings",
+      "blog post grids",
+      "content feed sections",
+      "resource card grids"
+    ],
+    "notSuitableFor": [
+      "icon-based feature cards",
+      "pricing tables",
+      "team member profiles"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-05T22:04:00.000Z"
+  }
+}

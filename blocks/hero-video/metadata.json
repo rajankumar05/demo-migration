@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-05T22:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.shrm.org/home",
+    "originPage": "SHRM homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "homepage-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + 2 CTAs + image",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "landing pages with video backgrounds",
+      "high-impact promotional sections"
+    ],
+    "notSuitableFor": [
+      "simple text-only heroes",
+      "blog post headers",
+      "minimal content pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-05T22:04:00.000Z"
+  }
+}

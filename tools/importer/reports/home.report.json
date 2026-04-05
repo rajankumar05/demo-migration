@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "url": "https://www.shrm.org/home",
+  "path": "home",
+  "timestamp": "2026-04-05T22:15:32.233Z",
+  "title": "SHRM Home - The Voice of All Things Work",
+  "template": "homepage",
+  "blocks": [
+    "hero-video",
+    "columns-promo",
+    "columns-promo",
+    "columns-promo",
+    "columns-promo",
+    "columns-promo",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "carousel-logos"
+  ]
+}
