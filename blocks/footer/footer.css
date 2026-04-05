@@ -1,46 +1,83 @@
 footer {
   background-color: var(--color-primary-dark);
   color: #fff;
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-s);
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer > div:first-child {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgb(255 255 255 / 20%);
 }
 
 footer .footer p {
   margin: 0 0 8px;
-  color: rgb(255 255 255 / 80%);
 }
 
-footer .footer p strong {
+/* Row 1: Our Brands */
+footer .footer > div > div:first-child {
+  padding: 40px 24px 24px;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+footer .footer > div > div:first-child h6 {
   color: #fff;
   font-size: var(--body-font-size-s);
+  font-weight: 600;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+footer .footer > div > div:first-child p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+footer .footer > div > div:first-child img {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+footer .footer > div > div:first-child img:hover {
+  opacity: 1;
+}
+
+/* Row 2: Link columns */
+footer .footer > div > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 32px 24px;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+footer .footer > div > div:nth-child(2) h6 {
+  color: #fff;
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  margin: 0 0 12px;
 }
 
 footer .footer ul {
   list-style: none;
   padding: 0;
-  margin: 8px 0 0;
+  margin: 0;
 }
 
 footer .footer ul li {
   padding: 4px 0;
+  line-height: 1.6;
 }
 
 footer .footer a:any-link {
-  color: rgb(255 255 255 / 80%);
+  color: rgb(255 255 255 / 70%);
   text-decoration: none;
+  font-size: var(--body-font-size-xs);
 }
 
 footer .footer a:hover {
@@ -48,22 +85,94 @@ footer .footer a:hover {
   text-decoration: underline;
 }
 
-footer .footer > div:last-child {
-  padding-top: 24px;
+/* Row 3: Follow Us / Social */
+footer .footer > div > div:nth-child(3) {
+  padding: 24px;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
 }
 
-footer .footer > div:last-child p {
-  color: rgb(255 255 255 / 60%);
+footer .footer > div > div:nth-child(3) strong {
+  color: #fff;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+footer .footer > div > div:nth-child(3) p:last-child {
+  margin-top: 8px;
+}
+
+footer .footer > div > div:nth-child(3) p:last-child a {
+  color: rgb(255 255 255 / 70%);
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+}
+
+/* Row 4: Copyright & Legal */
+footer .footer > div > div:last-child {
+  padding: 24px;
+}
+
+/* stylelint-disable no-descending-specificity */
+footer .footer > div > div:last-child p {
+  color: rgb(255 255 255 / 50%);
   font-size: var(--body-font-size-xs);
   line-height: 1.6;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+footer .footer > div > div:last-child a:any-link {
+  color: rgb(255 255 255 / 60%);
+}
+
+footer .footer > div > div:last-child a:hover {
+  color: #fff;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* Tablet */
+@media (width >= 600px) {
+  footer .footer > div > div:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  footer .footer > div:first-child {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+  footer .footer > div > div:first-child img {
+    height: 32px;
+  }
+}
+
+/* Desktop */
+@media (width >= 900px) {
+  footer .footer > div {
+    padding: 0 32px;
+  }
+
+  footer .footer > div > div:first-child {
+    padding: 48px 0 28px;
+  }
+
+  footer .footer > div > div:first-child img {
+    height: 36px;
+  }
+
+  footer .footer > div > div:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 36px 0;
+  }
+
+  footer .footer > div > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  footer .footer > div > div:nth-child(3) p:last-child {
+    margin: 0;
+  }
+
+  footer .footer > div > div:last-child {
+    padding: 24px 0 32px;
   }
 }

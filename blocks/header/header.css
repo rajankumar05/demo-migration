@@ -150,23 +150,20 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
+  flex-basis: 100px;
   line-height: 1;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 header .nav-brand a {
-  color: var(--color-primary-dark);
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 100px;
   height: auto;
+  display: block;
 }
 
 /* sections */
