@@ -13,7 +13,7 @@ export default function parse(element, { document }) {
   // Extract description text from the hero text component
   const descText = element.querySelector('#container-dfb94e53a7 .cmp-text p, .body-xl .cmp-text p');
 
-  // Extract only the first 2 CTA buttons (Become a Member + Why Join) within the hero content area
+  // Extract only the first 2 CTA buttons within the hero content area
   const heroContentArea = element.querySelector('#container-dfb94e53a7, .make-2-cols');
   const buttons = heroContentArea
     ? heroContentArea.querySelectorAll('.button__bdl')
@@ -34,11 +34,29 @@ export default function parse(element, { document }) {
     }
   });
 
-  // Build cells matching hero block structure:
-  // Row 1: background image (optional) - skip for this video hero
-  // Row 2: heading + text + CTAs (all in single cell)
+  // Build heading with animated text styled as <em> (rendered blue italic by CSS)
+  const h1 = document.createElement('h1');
+  if (heading) {
+    const animatedSpan = heading.querySelector('.animated-text');
+    if (animatedSpan) {
+      const staticText = heading.childNodes[0]?.textContent?.trim() || 'We Believe Work Can';
+      h1.append(document.createTextNode(staticText + ' '));
+      const em = document.createElement('em');
+      em.textContent = 'Drive Success';
+      h1.append(em);
+    } else {
+      h1.textContent = heading.textContent.trim();
+    }
+  }
+
+  // Row 1: Background image (the hero illustration)
+  const bgImg = document.createElement('img');
+  bgImg.src = 'https://www.shrm.org/content/dam/en/shrm/home/shrm-home-hero-2026.png';
+  bgImg.alt = 'SHRM Home Hero';
+
+  // Row 2: Content (heading + description + CTAs)
   const contentCell = document.createElement('div');
-  if (heading) contentCell.append(heading.cloneNode(true));
+  contentCell.append(h1);
   if (descText) contentCell.append(descText.cloneNode(true));
   ctaElements.forEach((cta) => {
     const p = document.createElement('p');
@@ -47,6 +65,7 @@ export default function parse(element, { document }) {
   });
 
   const cells = [
+    [bgImg],
     [contentCell],
   ];
 

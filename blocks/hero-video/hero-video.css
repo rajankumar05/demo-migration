@@ -26,13 +26,13 @@
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.15;
-  color: #1a1a2e;
+  color: #0f133a;
   margin: 0 0 24px;
 }
 
 .hero-video .hero-video-text h1 em,
 .hero-video .hero-video-text h1 i {
-  color: #2557a7;
+  color: #3375b8;
   font-style: italic;
 }
 
@@ -60,7 +60,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #2557a7;
+  background-color: #0f133a;
   color: #fff;
   padding: 14px 28px;
   border-radius: 4px;
@@ -76,7 +76,7 @@
 }
 
 .hero-video .hero-video-cta p:first-child a:hover {
-  background-color: #1a3f7a;
+  background-color: #1b3c69;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -84,7 +84,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #1a1a2e;
+  color: #0f133a;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;

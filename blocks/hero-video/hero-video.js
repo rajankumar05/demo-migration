@@ -6,8 +6,8 @@ export default function decorate(block) {
   let contentRow = rows[0];
   let imageRow = null;
 
-  // If first row has only a picture, it's the background; content is second row
-  if (rows.length > 1 && contentRow.querySelector('picture') && !contentRow.querySelector('h1, h2, p')) {
+  // If first row has only an image, it's the background; content is second row
+  if (rows.length > 1 && contentRow.querySelector('picture, img') && !contentRow.querySelector('h1, h2, p')) {
     imageRow = contentRow;
     [, contentRow] = rows;
   }
@@ -41,7 +41,7 @@ export default function decorate(block) {
 
   // If there's a background image row, use it as the illustration
   if (imageRow) {
-    const pic = imageRow.querySelector('picture');
+    const pic = imageRow.querySelector('picture') || imageRow.querySelector('img');
     if (pic) imgCol.append(pic);
   }
 

@@ -42,6 +42,7 @@ var CustomImportScript = (() => {
 
   // tools/importer/parsers/hero-video.js
   function parse(element, { document }) {
+    var _a, _b;
     const heading = element.querySelector(".cmp-embed h1, h1");
     const descText = element.querySelector("#container-dfb94e53a7 .cmp-text p, .body-xl .cmp-text p");
     const heroContentArea = element.querySelector("#container-dfb94e53a7, .make-2-cols");
@@ -60,8 +61,24 @@ var CustomImportScript = (() => {
         count += 1;
       }
     });
+    const h1 = document.createElement("h1");
+    if (heading) {
+      const animatedSpan = heading.querySelector(".animated-text");
+      if (animatedSpan) {
+        const staticText = ((_b = (_a = heading.childNodes[0]) == null ? void 0 : _a.textContent) == null ? void 0 : _b.trim()) || "We Believe Work Can";
+        h1.append(document.createTextNode(staticText + " "));
+        const em = document.createElement("em");
+        em.textContent = "Drive Success";
+        h1.append(em);
+      } else {
+        h1.textContent = heading.textContent.trim();
+      }
+    }
+    const bgImg = document.createElement("img");
+    bgImg.src = "https://www.shrm.org/content/dam/en/shrm/home/shrm-home-hero-2026.png";
+    bgImg.alt = "SHRM Home Hero";
     const contentCell = document.createElement("div");
-    if (heading) contentCell.append(heading.cloneNode(true));
+    contentCell.append(h1);
     if (descText) contentCell.append(descText.cloneNode(true));
     ctaElements.forEach((cta) => {
       const p = document.createElement("p");
@@ -69,6 +86,7 @@ var CustomImportScript = (() => {
       contentCell.append(p);
     });
     const cells = [
+      [bgImg],
       [contentCell]
     ];
     const block = WebImporter.Blocks.createBlock(document, {
