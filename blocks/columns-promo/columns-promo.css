@@ -5,6 +5,27 @@
 
 .columns-promo img {
   width: 100%;
+  border-radius: 8px;
+}
+
+.columns-promo h2 {
+  color: var(--text-color);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.columns-promo p {
+  line-height: 1.7;
+}
+
+.columns-promo a:any-link {
+  color: var(--color-primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.columns-promo a:hover {
+  text-decoration: underline;
 }
 
 .columns-promo > div > div {
@@ -19,11 +40,31 @@
   display: block;
 }
 
+/* White text when inside dark/blue sections */
+.blue .columns-promo h2,
+.dark-blue .columns-promo h2 {
+  color: #fff;
+}
+
+.blue .columns-promo p,
+.dark-blue .columns-promo p {
+  color: rgb(255 255 255 / 85%);
+}
+
+.blue .columns-promo a:any-link,
+.dark-blue .columns-promo a:any-link {
+  color: #fff;
+}
+
+.light-blue .columns-promo h2 {
+  color: var(--color-primary-dark);
+}
+
 @media (width >= 900px) {
   .columns-promo > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: 40px;
   }
 
   .columns-promo > div > div {
